@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bytelab *.css
+recursive-include bytelab *.csv
+recursive-include bytelab *.html
+recursive-include bytelab *.ico
+recursive-include bytelab *.js
+recursive-include bytelab *.json
+recursive-include bytelab *.md
+recursive-include bytelab *.png
+recursive-include bytelab *.py
+recursive-include bytelab *.svg
+recursive-include bytelab *.txt
+recursive-exclude bytelab *.pyc
