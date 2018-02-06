@@ -7,8 +7,7 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
- "letter_head": "BidadiUT", 
- "modified": "2018-01-31 17:36:26.614352", 
+ "modified": "2018-02-05 20:03:15.470834", 
  "modified_by": "Administrator", 
  "module": "Bytelab", 
  "name": "Simple Stock Balance", 
@@ -22,6 +21,10 @@
   }, 
   {
    "role": "Stock User"
+  }, 
+  {
+   "role": "Bytelab Employee"
   }
+  
  ]
 }
