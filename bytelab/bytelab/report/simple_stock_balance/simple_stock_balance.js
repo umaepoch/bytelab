@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 frappe.query_reports["Simple Stock Balance"] = {
-	"filters": [
+    "filters": [
 
                 
                 {      "fieldname":"from_date",
@@ -17,13 +17,13 @@ frappe.query_reports["Simple Stock Balance"] = {
                         "fieldtype": "Date",
                         "default": frappe.datetime.get_today()
                 },
-        	{
-	            "fieldname": "item_code",
-        	    "label": __("Item"),
-        	    "fieldtype": "Link",
-        	    "options": "Item"
-        	},
- 	{
+            {
+                "fieldname": "item_code",
+                "label": __("Item"),
+                "fieldtype": "Link",
+                "options": "Item"
+            },
+    {
             "fieldname": "item_group",
             "label": __("Item Group"),
             "fieldtype": "Link",
@@ -36,35 +36,35 @@ frappe.query_reports["Simple Stock Balance"] = {
                         "fieldtype": "Data"
                 },
 
-		{
+        {
                         "fieldname":"cases",
                         "label": __("Case"),
-			"fieldtype": "Data"
+            "fieldtype": "Data"
 
-					
+                    
 
                 },
 
-		{
+        {
                         "fieldname":"warehouse",
                         "label": __("Warehouse"),
-			"fieldtype": "Link",
-			"options": "Warehouse"
-				
+            "fieldtype": "Link",
+            "options": "Warehouse"
+                
 
                 },
-		
+        
                 {
                         "fieldname":"detail",
                         "label": __("Detail"),
                         "fieldtype": "Data"
                 },
-		
-		{
+        
+        {
                         "fieldname":"mfr",
                         "label": __("MFR"),
                         "fieldtype": "Link",
-			"options": "Manufacturer"
+            "options": "Manufacturer"
                 },
 
 {
@@ -72,8 +72,13 @@ frappe.query_reports["Simple Stock Balance"] = {
                         "label": __("MFR PN"),
                         "fieldtype": "Data"
                 },
-		
-		
+		{
+                        "fieldname":"test",
+                        "label": __("Text Search"),
+                        "fieldtype": "Data"
+                },
+        
+        
                                   
                 
         ],
@@ -81,12 +86,15 @@ frappe.query_reports["Simple Stock Balance"] = {
         report.page.add_inner_button(__("Clear Filters"),
                 function() {
                   var args = "as a draft"
-//		  var filters = report.get_values();
+          var filters = report.get_values();
                   var reporter = frappe.query_reports["Simple Stock Balance"];
                     reporter.ClearFilters(report,args);})
                     
 
               },
+    isNumeric: function( obj ) {
+    return !jQuery.isArray( obj ) && (obj - parseFloat( obj ) + 1) >= 0;
+  },
    ClearFilters: function(report,status){
         frappe.query_report_filters_by_name.item_group.set_input("");
         frappe.query_report_filters_by_name.item_code.set_input("");
@@ -99,6 +107,3 @@ frappe.query_reports["Simple Stock Balance"] = {
 
    }
 }
-
-
-

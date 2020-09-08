@@ -1,5 +1,5 @@
 {
- "add_total_row": 0, 
+ "add_total_row": 1, 
  "apply_user_permissions": 1, 
  "creation": "2018-01-29 16:50:22.049522", 
  "disabled": 0, 
@@ -7,7 +7,8 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
- "modified": "2018-02-05 20:03:15.470834", 
+ "letter_head": "BidadiUT", 
+ "modified": "2018-02-06 20:42:11.081147", 
  "modified_by": "Administrator", 
  "module": "Bytelab", 
  "name": "Simple Stock Balance", 
@@ -23,8 +24,7 @@
    "role": "Stock User"
   }, 
   {
-   "role": "Bytelab Employee"
+   "role": "Byte Lab Employee"
   }
-  
  ]
 }
